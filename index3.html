@@ -34,6 +34,8 @@
 
     <!-- ---css--- -->
     <link rel="stylesheet" href="./css/styles3.css">
+    <!-- ---responsive--- -->
+    <link rel="stylesheet" href="./css/responsive.css">
     <title>Du an 3</title>
 </head>
 <body>
@@ -43,10 +45,10 @@
             <!-- ---header-top--- -->
             <div class="header-top">
                 <!-- ---logo--- -->
-                 <a href="#!"><img width="50px" height="50px" class="logo header__logo" src="./icons/logo.png" alt=""></a>
+                 <a href="#!"><img width="50px" height="50px" class="navbar-logo" src="./icons/logo.png" alt=""></a>
                  <!-- ---nav--- -->
                   <nav class="navbar">
-                        <ul class="navbar__list" id ="navbar__list--pc">
+                        <ul class="navbar__list" id="navbar__list--pc">
                             <li class="navbar__item"><a href="" class="navbar__link">Home</a></li>
                             <li class="navbar__item"><a href="" class="navbar__link navbar__link--active">Services</a></li>
                             <li class="navbar__item"><a href="" class="navbar__link">About</a></li>
@@ -80,42 +82,62 @@
             </section>
         </div>
     </header>  
-    <!-- Nobile header -->
+    <!--Tablet Mobile header-->
     <div class="mobile-header">
-        <!-- table/mobile menu -->
+        <!--Tablet Mobile menu-->
         <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden>
         <label for="menu-checkbox">
-            <svg class="menu-header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> 
-                <path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
-            </svg>
+            <svg class="menu-header__icon" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path fill = "currentColor" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
         </label>
-        <!-- over lay -->
+        <!-- overlay -->
         <label for="menu-checkbox" class="menu-overlay"></label>
         <!-- menu content -->
-        <div class="menu-drawer">
-            <!-- menu top -->
+         <div class="menu-drawer">
             <div class="menu-drawer__top">
-                <!-- logo -->
-                <a href="#!"><img width="50px" height="50px" class="logo " src="./icons/logo.png" alt=""></a>
-                <!-- close icon -->
-                <label for="menu-checkbox">
-                    <svg class="close__menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                        <path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+                <!-- ---logo--- -->
+                <a href="#!"><img width="40px" height="40px" class="mobile-navbar-logo" src="./icons/logo.png" alt=""></a>
+                 <!-- icon close menu -->
+                 <label for="menu-checkbox" >
+                    <svg class="close-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="currentColor" d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/>
                     </svg>
                 </label>
             </div>
-            <!-- nav mobile -->
-            <ul id="navbar__list--mobile">
-                
-            </ul>
-            <script>
-                const navPc = document.querySelector("#navbar__list--pc");
-                const navMobile = document.querySelector("#navbar__list--mobile");
-                navMobile.innerHTML = navPc.innerHTML;
-            </script>
-        </div>
-    </div>
+            <nav class="menu-drawer__navbar">
+                <ul class="navbar__list-mobile" id="navbar__list--mobile">
+                 
+               
+                <script>
+                    const navPC = document.querySelector("#navbar__list--pc");
+                    const navMB = document.querySelector("#navbar__list--mobile");
+                    navMB.innerHTML = navPC.innerHTML;
+                    //copy
 
+                </script>
+                 </ul>
+          </nav>
+          <!-- seperate -->
+          <div class="separate">
+
+          </div>
+          <!-- cta action -->
+        <!-- <div class="action">
+            <a href="" class="action__login">Log in</a>
+            <a href="" class="btn action__sigup">Sign up</a>
+        </div> -->
+        <div class="show-on-mobile">
+            <ul>
+                <li class="navbar__item"><a href="" class="navbar__link">Log in</a></li>
+                <li class="navbar__item"><a href="" class="navbar__link">Sign up</a></li>    
+            </ul>
+           
+        </div>
+        
+
+         </div>
+
+    </div>
     <!-- main -->
      <main>
         <!-- services -->
@@ -373,8 +395,8 @@
             <!-- top footer -->
              <div class="footer__top">
                 <!-- column 1 -->
-                <div class="footer__column">
-                    <a href="#!"><img width="50px" height="50px" class="logo" src="./icons/logo.png" alt=""></a>
+                <div class="footer__column footer-hidden-tablet">
+                    <a href="#!"><img width="50px" height="50px" class="footer-logo" src="./icons/logo.png" alt=""></a>
                     <p class="footer__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam.</p>
                 </div>
                 <!-- column 2 -->
